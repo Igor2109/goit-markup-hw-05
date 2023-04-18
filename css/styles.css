@@ -74,7 +74,21 @@ body {
   color: var(--slate-clr);
   background-color: var(--white-clr);
 }
-/* Header box  */
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 2px solid red; */
+  outline-offset: -2px;
+}
+/**
+  |============================
+  | header
+  |============================
+*/
+
 .header-container {
   display: flex;
   align-items: center;
@@ -87,12 +101,34 @@ body {
   align-items: center;
   gap: 40px;
 }
+.header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
-/**
-  |============================
-  | header
-  |============================
-*/
+.menu-nav {
+  display: flex;
+  gap: 40px;
+}
+.header-nav {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.address-mail {
+  /* margin-right: 40px; */
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.contacts-tel {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* Header Logo  */
+
 .header-logo {
   margin-right: 76px;
   display: block;
@@ -118,22 +154,6 @@ body {
 .logo-light {
   font-family: "Raleway", sans-serif;
   color: var(--navy-blue-modal-clr);
-}
-.header-nav {
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-}
-.address-mail {
-  /* margin-right: 40px; */
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-.contacts-tel {
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .header-item:hover,
@@ -174,38 +194,17 @@ body {
   | Header box
   |============================
 */
-.header {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
 
-.menu-nav {
-  display: flex;
-  gap: 40px;
-}
-.container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  /* outline: 2px solid red; */
-  outline-offset: -2px;
-}
 
 /**
   |============================
-  | hero box
+  | Hero box
   |============================
 */
 .hero-title {
   max-width: 496px;
 }
-/**
-  |============================
-  | Hero
-  |============================
-*/
+
 .hero-container {
   
 }
@@ -237,6 +236,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+/* Hero Button */
 .btn-color {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -258,6 +258,11 @@ body {
   font-family: inherit;
   background-color: var(--ocean-clr);
 }
+/**
+  |============================
+  | Hero
+  |============================
+*/
 
 /**
   |============================
@@ -313,6 +318,36 @@ body {
   |============================
 */
 
+.bcg-team {
+  line-height: 1.11;
+  background-color: var(--navy-blue-modal-clr);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.bcg-img {
+  background-color: var(--white-clr);
+}
+.header-team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue-clr);
+  margin-bottom: 72px;
+}
+.header-work {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue-clr);
+  margin-bottom: 72px;
+}
+
 .img-list {
   display: flex;
   gap: 24px;
@@ -322,9 +357,12 @@ body {
   margin-right: auto;
   gap: 24px;
 }
-.header-work {
-  margin-bottom: 72px;
-}
+
+/**
+  |============================
+  | What are we doing?
+  |============================
+*/
 /**
   |============================
   | Our Team box
@@ -357,12 +395,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--slate-clr);
   margin-bottom: 8px;
-}
-
-.team-name {
-  margin-bottom: 8px;
-}
-.team-prof {
 }
 .team-card {
   width: calc((100%-72px) / 4);
@@ -453,7 +485,7 @@ border-radius: 4px;
   row-gap: 48px;
 }
 .container-list {
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
   display: flex;
   width: 1128px;
   gap: 24px;
@@ -477,52 +509,13 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .cards-link {
   display: block;
 }
-/**
-  |============================
-  | section 2
-  |============================
-*/
 
-.header-work {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--navy-blue-clr);
-}
-
-/**
-  |============================
-  | What are we doing?
-  |============================
-*/
-.bcg-team {
-  line-height: 1.11;
-  background-color: var(--navy-blue-modal-clr);
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-.bcg-img {
-  background-color: var(--white-clr);
-}
-.header-team {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--navy-blue-clr);
-  margin-bottom: 72px;
-}
 /**
   |============================
   | Customers
   |============================
 */
-.section {
+.section-custom {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -539,8 +532,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   display: flex;
   align-items: center;
   gap: 24px;
-}
-.list {
 }
 .clients-item {
   width: calc((100%-120px) / 6);
@@ -566,9 +557,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .clients-icon {
   fill: currentColor;
 }
-.clients-icon:hover,
-.clients-icon:focus {
-}
+
 
 /**
   |============================
@@ -584,7 +573,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   margin-right: 120px;
 }
 .footer-txt {
-  width: 264px;
+  
 }
 .footer {
   background-color: var(--navy-blue-clr);
@@ -595,14 +584,13 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue-modal-clr);
+  width: 264px;
 }
 .logo-ftr {
   display: inline-block;
   margin-bottom: 16px;
 }
 
-.section-social {
-}
 .social-title {
   font-weight: 500;
   font-size: 16px;
@@ -615,9 +603,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   display: flex;
   justify-content: center;
   gap: 16px;
-}
-
-.footer-social-item {
 }
 .footer-social-link {
   display: flex;
