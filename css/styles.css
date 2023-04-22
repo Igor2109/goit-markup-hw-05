@@ -16,7 +16,6 @@
   --anim-fast: 250ms ease-in;
   --anim-slow: 1000ms ease-in-out;
 
-
   /**
   |============================
   | Fonts
@@ -205,8 +204,6 @@ body {
 .contacts-list {
   display: flex;
   gap: 40px;
-  
-  
 }
 .contacts-list :hover,
 .contacts-list :focus {
@@ -222,9 +219,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--slate-clr);
   transition: color var(--anim-fast);
-
-  
-
 }
 /**
   |============================
@@ -289,8 +283,7 @@ body {
   border: none;
   border-radius: 4px;
 
-  transition: background-color var(--anim-fast), box-shadow var(--anim-fast); 
-  
+  transition: background-color var(--anim-fast), box-shadow var(--anim-fast);
 }
 .btn-color:hover,
 .btn-color:focus {
@@ -507,7 +500,8 @@ body {
   color: var(--iris-clr);
   border: 1px solid var(--accent-clr);
 
-  transition: color var(--anim-fast), box-shadow var(--anim-fast), background-color var(--anim-fast);
+  transition: color var(--anim-fast), box-shadow var(--anim-fast),
+    background-color var(--anim-fast), border var(--anim-fast);
 }
 
 .btn-list {
@@ -531,14 +525,12 @@ body {
   row-gap: 48px;
 }
 .container-list {
-  /* padding-bottom: 120px; */
   display: flex;
   width: 1128px;
   gap: 24px;
 }
 .cards {
   width: calc(100%- (24px * 2) / 3);
-
 }
 .contant {
   padding: 32px 16px;
@@ -558,31 +550,35 @@ body {
   position: relative;
   overflow: hidden;
 }
+.cards-link:focus .overlay {
+  transform: translate(0);
+}
 .overlay {
   position: absolute;
-  padding: 40px 32px 164px;
-  bottom: 0;
   top: 0;
   left: 0%;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px 164px;
+  background-color: var(--iris-clr);
+  
+  transition: transform var(--anim-fast);
+}
+.cards:hover .overlay {
+  transform: translate(0);
+}
+.overlay-label {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  background-color: var(--iris-clr);
-  width: 100%;
-  height: 100%;
-
-  transform: translateY(100%);
-  transition: transform var(--anim-fast);
-} 
-
-.overlay-label {
   color: var(--navy-blue-modal-clr);
   text-align: center;
 }
-.cards:hover .overlay {
-  transform: translateY(0);
-}
+
+
 
 /**
   |============================
@@ -622,7 +618,7 @@ body {
   border-radius: 4px;
   color: var(--light-slate-clr);
 
-  transition: border-color var(--anim-fast), color var(--anim-fast)
+  transition: border-color var(--anim-fast), color var(--anim-fast);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -736,13 +732,13 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  
+
   transition: transform var(--anim-slow), opacity var(--anim-slow);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) rotate(360deg) scale(0.2);
   opacity: 0;
- }
+}
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--ocean-clr);
@@ -751,7 +747,9 @@ body {
 
 .modal-btn {
   position: absolute;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   border-radius: 50%;
   cursor: pointer;
@@ -759,16 +757,14 @@ body {
   width: 24px;
   height: 24px;
   top: 24px;
-  left: 360px;
+  right: 24px;
   box-sizing: border-box;
   color: var(--navy-blue-clr);
   background: var(--accent-clr);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   transition: background-color var(--anim-fast), color var(--anim-fast);
-  
 }
 .modal-icon {
-fill: currentColor;
- 
+  fill: currentColor;
 }
